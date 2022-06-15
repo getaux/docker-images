@@ -8,7 +8,9 @@
 
 ### Build & publish
 
-`sh publish-worker.sh`
+```
+sh publish-worker.sh
+```
 
 ### Usage
 
