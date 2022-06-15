@@ -12,14 +12,23 @@
 
 ### Usage
 
-Pull container
-`docker pull ghcr.io/getaux/worker:latest`
+Pull container:
 
-Setup worker and setup credentials
-`docker run --name auctionx-worker -v ~/.auctionx:/srv/app/.auctionx -it ghcr.io/getaux/worker`
+```
+docker pull ghcr.io/getaux/worker:latest
+```
 
-Run worker with auto-restart to process messages
-`docker run --name auctionx-worker -d --restart unless-stopped -v ~/.auctionx:/srv/app/.auctionx ghcr.io/getaux/worker`
+Setup worker and setup credentials:
+
+```
+docker run --name auctionx-worker -v ~/.auctionx:/srv/app/.auctionx -it ghcr.io/getaux/worker
+```
+
+Run worker with auto-restart to process messages:
+
+```
+docker run --name auctionx-worker -d --restart unless-stopped -v ~/.auctionx:/srv/app/.auctionx ghcr.io/getaux/worker
+```
 
 ## License
 
