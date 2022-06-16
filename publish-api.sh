@@ -2,8 +2,8 @@
 
 export REGISTRY_HOST=ghcr.io
 export USERNAME=getaux
-export LAST_VERSION=1.0.4
-export CONTAINER_NAME=worker
+export LAST_VERSION=1.0.0
+export CONTAINER_NAME=api
 
 cd $CONTAINER_NAME && \
 docker build -t $CONTAINER_NAME . --no-cache && \
