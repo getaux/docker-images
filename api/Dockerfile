@@ -11,6 +11,7 @@ RUN set -eux; \
     docker-php-ext-configure zip; \
     docker-php-ext-install -j$(nproc) \
       gmp \
+      bcmath \
       pgsql; \
     runDeps="$( \
     		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions \
@@ -31,6 +32,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 WORKDIR /srv/api
 
 RUN git clone https://github.com/getaux/api.git /srv/api; \
+    rm -rf .git; \
     composer install; \
     ln -s /srv/api/bin/console /bin/console;
 

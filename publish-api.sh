@@ -2,7 +2,7 @@
 
 export REGISTRY_HOST=ghcr.io
 export USERNAME=getaux
-export LAST_VERSION=1.0.0
+export LAST_VERSION=1.0.8
 export CONTAINER_NAME=api
 
 cd $CONTAINER_NAME && \
